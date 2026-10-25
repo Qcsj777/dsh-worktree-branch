@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Worktree & Branch",
+    "description": "Adds Codex-style location and branch switchers to the New Session screen of git workspaces."
+  }
+}

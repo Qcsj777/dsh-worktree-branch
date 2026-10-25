@@ -1,0 +1,58 @@
+{
+  "name": "dsh-worktree-branch",
+  "version": "0.1.0",
+  "description": "Codex-style location, worktree and branch switchers on the New Session screen of DeepSeek Harness.",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "git-parse.mjs",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "git",
+    "worktree",
+    "branch"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qcsj777/dsh-worktree-branch.git"
+  },
+  "homepage": "https://github.com/Qcsj777/dsh-worktree-branch#readme",
+  "bugs": {
+    "url": "https://github.com/Qcsj777/dsh-worktree-branch/issues"
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

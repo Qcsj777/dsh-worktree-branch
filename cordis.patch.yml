@@ -1,0 +1,3 @@
+- insert:
+    - id: worktree-branch
+      name: 'dsh-worktree-branch'
